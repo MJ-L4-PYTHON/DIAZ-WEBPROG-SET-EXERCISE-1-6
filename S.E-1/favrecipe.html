@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>favorite Recipe's</title>
+
+  <!-- ICON FOR TITLE SECTION -->
+  <link rel="icon" type="image/ico" href="favicon.ico" />
+
+  <style>
+    /* custom font */
+    @font-face{
+     font-family: Font;
+     src: url(cute.otf);
+    }
+
+    /* applies the custom font to every text in the website */
+    html * {
+        font-family: Font;
+    }
+
+    /* my own background I added to match the theme */
+    body{
+        background-image: url(pinkbg.png);
+        background-size: 100%;
+    }
+
+    /* CSS for the flip book */
+    .flip-book {
+      perspective: 1000px;
+      margin: 50px auto;
+      width: 980px;
+      height: 670px;
+      position: relative;
+    }
+    .flip-book-inner {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transform-style: preserve-3d;
+      transition: transform 1s;
+    }
+    .page {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      backface-visibility: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .page:nth-child(odd) {
+      background-color: #ffcbcb;
+    }
+    .page:nth-child(even) {
+      background-color: #ffcbcb;
+    }
+    .flip-book-button {
+    font-size: large;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(255, 255, 255, 0.5);
+      padding: 0px;
+      border: none;
+      cursor: pointer;
+      border-radius: 20px;
+      border: 2px solid #FFA9A3;
+      padding: 12px 20px;
+      transition: background-color 0.3s;
+      font-weight: 500;
+    }
+
+    /* makes the button change colors when mouse is hovering over it */
+    .flip-book-button:hover {background-color: rgba(252, 120, 120, 0.8);}
+
+    .flip-book-prev {
+      left: -150px;
+    }
+    .flip-book-next {
+      right: -120px;
+    }
+
+    p{line-height: 20px;}
+
+    /* adjustments for images and recipe credits */
+    .cookie {
+    position: absolute;
+    top: 180px; 
+    right: 80px; 
+    width: 350px; 
+    height: auto; 
+    }
+
+    .tasty {
+    position: absolute;
+    top: 340px; 
+    right: -40px; 
+    width: 350px; 
+    height: auto; 
+    }
+
+    .tasty a:hover {color: #fc4f42;}
+
+    .cake {
+    position: absolute;
+    top: 30px; 
+    right: 40px; 
+    width: 450px; 
+    height: auto; 
+    }
+
+    .zoha {
+    position: absolute;
+    top: 350px; 
+    right: -90px; 
+    width: 450px; 
+    height: auto; 
+    }
+
+    .zoha a:hover {color: #fc4f42;}
+
+    .truffles {
+    position: absolute;
+    top: 130px; 
+    right: 70px; 
+    width: 300px; 
+    height: auto; 
+    }
+
+    .tineats {
+    position: absolute;
+    top: 330px; 
+    right: 20px; 
+    width: 300px; 
+    height: auto; 
+    }
+
+    .tineats a:hover {color: #fc4f42;}
+
+    .mochi {
+    position: absolute;
+    top: 110px; 
+    right: 70px; 
+    width: 300px; 
+    height: auto; 
+    }
+
+    .scratch {
+    position: absolute;
+    top: 360px; 
+    right: 70px; 
+    width: 300px; 
+    height: auto; 
+    }
+
+    .scratch a:hover {color: #fc4f42;}
+  </style>
+</head>
+<body>
+
+<!-- Flip book container -->
+<div class="flip-book">
+    <div class="flip-book-inner">
+    <!-- Page 1: Cover Page/first page to appear when opening website -->
+    <div class="page">
+      <center><h1 style="font-size: 50px; color: #fd6e64; text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); letter-spacing: 5px;">My Favorite Recipe's</h1><center>
+      <br />
+        <img src="chef.png"
+        width="400"
+        height="400">
+        <h4 style="color: #f85449; text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); letter-spacing: 6px; font-weight: 100; font-size: larger;">Marq Alisha Janaya A. Diaz</h4>
+    </div>
+    
+    <!-- Page 2: Recipe Page 1 -->
+    <div class="page">
+      <!-- Description of the recipe -->
+      <center><h1 style="font-weight:900; color: #fd6e64; text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); letter-spacing: 5px;">Chocolate Chip Cookies</h1></center>
+      <!-- Description of the recipe -->
+      <center><p>The best and easy recipe for the chewy chocolate chip cookies you see everywhere !</p></center>
+      <!-- List of ingredients -->
+      <h2>Ingredients</h2>
+      <ul style="font-size: 15px;">
+        <!-- Each ingredient listed with its quantity -->
+        <li>1/2 cup granulated sugar (100g)</li>
+        <li>3/4 cup brown sugar(165 g), packed </li>
+        <li>1 teaspoon salt</li>
+        <li>1/2 cup unsalted butter(115 g), melted</li>
+        <li>1 large egg</li>
+        <li>1 teaspoon vanilla extract</li>
+        <li>1 1/4 cups all-purpose flour(155 g)</li>
+        <li>1/2 teaspoon baking soda</li>
+        <li>4 oz milk or semi-sweet chocolate chunks(110 g)</li>
+        <li>4 oz dark chocolate chunk(110 g), or your preference</li>
+      </ul>
+      <!-- Instructions for preparing the recipe -->
+      <h2>Method</h2>
+      <ol style="font-size: 15px;">
+        <!-- Each step of the preparation process -->
+        <li>In a large bowl, whisk together the sugars, salt, and butter until a paste forms with no lumps.</li>
+        <li>Whisk in the egg and vanilla, beating until light ribbons fall off the whisk and remain for a short while before falling back into the mixture.</li>
+        <li>Sift in the flour and baking soda, then fold the mixture with a spatula (Be careful not to overmix, which would cause the gluten in the flour to toughen resulting in cakier cookies).</li>
+        <li>Fold in the chocolate chunks, then chill the dough for at least 30 minutes. For a more intense toffee-like flavor and deeper color, chill the dough overnight. The longer the dough rests, the more complex its flavor will be.</li>
+        <li>Preheat oven to 350°F (180°C). Line a baking sheet with parchment paper.</li>
+        <li>Scoop the dough with an ice-cream scoop onto a parchment paper-lined baking sheet, leaving at least 4 inches (10 cm) of space between cookies and 2 inches (5 cm) of space from the edges of the pan so that the cookies can spread evenly.</li>
+        <li>Bake for 12-15 minutes, or until the edges have started to barely brown.</li>
+        <li>Cool completely before serving.</li>
+      </ol>
+
+      <!-- Image of the prepared cookies -->
+      <img src="cookie.png" class="cookie">
+      <!-- Source attribution for the recipe -->
+      <h5 class="tasty" style="font-weight: 100;">recipe from <a href="https://tasty.co/recipe/the-best-chewy-chocolate-chip-cookies">tasty.co</a></h5>
+    </div>
+    
+    <!-- Page 3: Recipe Page 2 -->
+    <div class="page">
+      <!-- Description of the recipe -->
+        <center><h1 style="font-weight:900; color: #fd6e64; text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); letter-spacing: 5px;">Chocolate Cake</h1></center>
+        <!-- Description of the recipe -->
+        <center><p>A rich and decadent chocolate cake that melts in your mouth.</p></center>
+      <!-- List of ingredients -->
+        <h2>Ingredients</h2>
+      <ul style="font-size: 15px;">
+        <li>All purpose flour</li>
+        <li>Granulated white sugar</li>
+        <li>Baking powder and baking soda</li>
+        <li>Salt</li>
+        <li>Egg</li>
+        <li>Vegetable oil</li>
+        <li>Buttermilk</li>
+        <li>Boiling water</li>
+        <li>Instant coffee</li>
+        <li>Cocoa powder</li>
+      </ul>
+      <h2>Method</h2>
+      <!-- Instructions for preparing the recipe -->
+      <ol style="font-size: 20px;">
+        <li>Mix the flour, sugar, baking powder, baking soda and salt in a bowl. Sift the ingredients to make sure there are no lumps.</li>
+        <li>Break in an egg, and pour in the oil and buttermilk. Use a hand whisk to gently mix until everything comes together.</li>
+        <li>Add the boiling water to cocoa powder and instant coffee separately to "bloom" the cocoa powder</li>
+        <li>Add the cocoa powder mix to the rest of the batter, and gently fold to combine.</li>
+        <li>Bake the cake! (around 20-30 minutes)</li>
+      </ol>
+
+      <!-- Image of the prepared cake -->
+      <img src="cake.png" class="cake">
+      <h5 class="zoha" style="font-weight: 100;">recipe from <a href="https://bakewithzoha.com/easy-chocolate-cake/">bake with zoha</a></h5>
+    </div>
+    
+    <!-- Page 4: Recipe Page 3 -->
+    <div class="page">
+      <!-- Title of the recipe with custom styles -->
+        <center><h1 style="font-weight:900; color: #fd6e64; text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); letter-spacing: 5px;">Chocolate Truffles</h1></center>
+        <!-- Description of the recipe -->
+        <center><p>a traditional French chocolate treat consisting of a chocolate ganache core covered in chopped nuts, coconut, or cocoa powder.</p></center>
+      <!-- List of ingredients -->
+        <h2>Ingredients</h2>
+      <ul style="font-size: 20px;">
+        <!-- Each ingredient listed with its quantity -->
+        <li>285g / 10 oz dark chocolate melts</li>
+        <li>2 tbsp (30g) unsalted butter</li>
+        <li>1/2 cup (125ml) cream</li>
+      </ul>
+      <br />
+      <br />
+      <!-- Instructions for preparing the recipe -->
+      <h2>Method</h2>
+      <ol style="font-size: 18px;">
+        <!-- Each step of the preparation process -->
+        <li>Place chocolate, cream and butter in a microwave proof bowl. Microwave on high for 4 x 30 second bursts.</li>
+        <li>Cover bowl with a plate and stand for 5 minutes, then stir until chocolate is melted and smooth</li>
+        <li>Place the bowl in the refrigerator for 6 hours</li>
+        <li>Put a dinner plate or tray that you will use to place the rolled truffles on in the fridge as well.</li>
+        <li>Place cocoa / coatings of choice in a small bowl or plate.</li>
+        <li>Remove Ganache from fridge.</li>
+        <li>Get an ice pack or bag of frozen peas from the freezer and place on the bench.</li>
+        <li>Use a teaspoon to scoop the mixture out into your hands. Roll into ball then place on chilled plate.</li>
+        <li>Once all balls are rolled, roll in cocoa or Coatings of choice. Serve at room temp so the chocolate is beautifully creamy inside!</li>
+      </ol>
+
+      <!-- Image of the prepared truffles -->
+      <img src="truffles.png" class="truffles">
+      <!-- Source attribution for the recipe -->
+      <h5 class="tineats" style="font-weight: 100;">recipe from <a href="https://www.recipetineats.com/chocolate-ganache-truffles/">recipetineats</a></h5>
+    </div>
+
+    <!-- Page 5: Recipe Page 4 -->
+    <div class="page">
+        <center><h1 style="font-weight:900; color: #fd6e64; text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); letter-spacing: 5px;">Ice Cream Mochi</h1></center>
+        <center><p>Mochi ice cream is a popular Japanese dessert made from a sweet pounded rice dough wrapped around ice cream.</p></center>
+      <h2>Ingredients</h2>
+      <ul style="font-size: 15px;">
+        <li>3 cup glutinous rice flour</li>
+        <li>0.75 cup sugar</li>
+        <li>6 Tablespoons powdered sugar</li>
+        <li>3 cup water</li>
+        <li>food coloring (optional, to change the color of the dough)</li>
+        <li>Cornstarch or potato starch</li>
+        <li>ice cream of your choice</li>
+      </ul>
+      <br />
+      <h2>Method</h2>
+      <ol style="font-size: 20px;">
+        <li>Line a sheet pan, scoop ice cream balls onto parchment paper, freeze for 1 hour.</li>
+        <li>Make mochi dough: Mix ingredients, microwave, fold, and roll into rectangle. Refrigerate for 30 minutes.</li>
+        <li>Cut plastic wrap squares.</li>
+        <li>Cut dough circles, brush off excess cornstarch.</li>
+        <li>Wrap one ice cream scoop in each dough circle, pinch edges to seal.</li>
+        <li>Wrap mochi in plastic wrap, freeze twisted side down for at least 1 hour.</li>
+        <li>Store wrapped mochi in freezer-safe bag or container for up to 3 months. Thaw slightly before eating.</li>
+      </ol>
+
+      <img src="mochi.png" class="mochi">
+      <h5 class="scratch" style="font-weight: 100;">recipe from <a href="https://tastesbetterfromscratch.com/mochi-ice-cream/">tastesbetterfromscratch.com</a></h5>
+    </div>
+    
+  <!-- Previous and Next buttons -->
+  </div>
+  <button class="flip-book-button flip-book-prev" onclick="prevPage()">Previous</button>
+  <button class="flip-book-button flip-book-next" onclick="nextPage()">Next</button>
+</div>
+
+
+<!-- javascript defines functions to show the current page when navigating between pages  -->
+<script>
+  // Variable to track the current page index
+  let currentPage = 0;
+
+  // Select all elements with the class 'page'
+  const pages = document.querySelectorAll('.page');
+
+  // Function to show a specific page by index
+  function showPage(pageIndex) {
+    // Loop through all pages
+    pages.forEach((page, index) => {
+      // If the current index matches the target index, show the page
+      if (index === pageIndex) {
+        page.style.transform = 'none'; // Show the page without rotation
+      } else {
+        // If the index doesn't match, rotate the page to hide it
+        page.style.transform = 'rotateY(180deg)';
+      }
+    });
+    // Update the currentPage variable to the new index
+    currentPage = pageIndex;
+  }
+
+   // Function to show the next page
+  function nextPage() {
+    // Check if there is a next page available
+    if (currentPage < pages.length - 1) {
+      // If yes, show the next page by incrementing the currentPage index
+      showPage(currentPage + 1);
+    }
+  }
+
+  // Function to show the previous page
+  function prevPage() {
+    // Check if there is a previous page available
+    if (currentPage > 0) {
+      // If yes, show the previous page by decrementing the currentPage index
+      showPage(currentPage - 1);
+    }
+  }
+
+  // Call showPage(0) to display the cover pag when the page loads
+  showPage(0);
+</script>
+
+</body>
+</html>

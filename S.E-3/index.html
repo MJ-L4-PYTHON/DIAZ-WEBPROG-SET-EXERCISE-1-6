@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Images</title>
+<style>
+  /* CSS styles for the image container */
+  .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    color: white;
+  }
+
+  /* CSS styles for the images */
+  .image-container img {
+    max-width: 700px;
+    max-height: 700px;
+    transition: filter 0.3s ease;
+  }
+
+  /* CSS styles for image hover effect */
+  .image-container img:hover {
+    filter: none;
+  }
+
+  /* CSS styles for grayscale effect */
+  .grayscale {
+    filter: brightness(30)
+  }
+
+  /* CSS styles for sepia effect */
+  .sepia {
+    filter: sepia(100%);
+  }
+
+  /* CSS styles for blur effect */
+  .blur {
+    filter: blur(5px);
+  }
+
+  /* CSS styles for copyright text */
+  .copyright {
+    text-align: center;
+    color: white;
+  }
+
+  /* CSS styles for copyright link hover effect */
+  .copyright a:hover {
+    color: rgb(255, 0, 0);
+  }
+
+  /* CSS styles for body */
+  body {
+    margin: 0;
+    padding: 0;
+    height: 900px;
+    background-color: black;
+    transition: background-color 0.5s ease;
+  }
+
+  /* CSS styles for content */
+  .content {
+    padding: 20px;
+  }
+
+  /* CSS styles for images */
+  img {
+    border: 5px solid #8E0900;
+  }
+
+  /* CSS styles for heading */
+  h1 {
+    color: white;
+  }
+</style>
+</head>
+<body>
+  <!-- Centered heading -->
+  <center><h1>Hover over images to view original image</h1></center>
+  <!-- Container for images -->
+  <div class="image-container">
+    <div>
+      <!-- Image 1 with grayscale effect -->
+      <img src="1.jpg" alt="lost places" title="lost place" class="grayscale">
+      <!-- Copyright information for image 1 -->
+      <p class="copyright">This image is sourced from <a href="https://pixabay.com/photos/lost-places-old-decay-ruin-factory-1549096/">Pixabay</a> and is licensed under the Creative Commons Zero (CC0) license.</p>
+    </div>
+  </div>
+
+<br />
+<br />
+<br />
+<br />
+
+<!-- Container for images -->
+  <div class="image-container">
+    <div>
+      <!-- Image 2 with sepia effect -->
+      <img src="2.jpg" alt="creepy stairs" title="creepy stairs" class="sepia">
+      <!-- Copyright information for image 2 -->
+      <p class="copyright">This image is sourced from <a href="https://pixabay.com/photos/pforphoto-lost-places-stairs-7036013/">Pixabay</a> and is licensed under the Creative Commons Zero (CC0) license.</p>
+    </div>
+  </div>
+
+<br />
+<br />
+<br />
+<br />
+
+<!-- Container for images -->
+  <div class="image-container">
+    <div>
+      <!-- Image 3 with blur effect -->
+      <img src="3.jpg" alt="creepy hallways" title="creepy hallway" class="blur">
+      <!-- Copyright information for image 3 -->
+      <p class="copyright">This image is sourced from <a href="https://pixabay.com/photos/lost-places-hallway-abandoned-776297/">Pixabay</a> and is licensed under the Creative Commons Zero (CC0) license.</p>
+    </div>
+  </div>
+
+  <!-- JavaScript for changing background color based on scroll position -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      window.addEventListener("scroll", function() {
+        var scrollPosition = window.scrollY;
+        var body = document.querySelector("body");
+        var backgroundColor;
+
+        // Change background color based on scroll position
+        if (scrollPosition < 900) {
+          backgroundColor = "#660700";
+        } else if (scrollPosition >= 500 && scrollPosition < 1000) {
+          backgroundColor = "#980A00";
+        } else if (scrollPosition >= 1000 && scrollPosition < 1500) {
+          backgroundColor = "#4B0021";
+        } 
+
+        body.style.backgroundColor = backgroundColor;
+      });
+    });
+  </script>
+</body>
+</html>
